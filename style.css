@@ -2,11 +2,17 @@
 :root {
   --main-bg-color: #ffffff;
   --main-color: #000000;
+  --main-contrast-color: #26252d;
 
-  --alternate-bg-color: #242426;
-  --alternate-color: #96969f;
+  --alternate-bg-color: #282c34;
+  --alternate-color: #a9b7c6;
+  --alternate-contrast-color: #ffffff;
 
-  --contrast-color: #f19b23;
+  --contrast-color: #f78c6c;
+  --contrast-opposite-color: #a9b7c6;
+  --alternative-contrast-color: #34b198;
+
+  --shadow-color: #00000024;
 }
 
 /* ELEMENTS */
@@ -43,8 +49,26 @@ hr {
   height: 6px;
   width: 322px;
   border: none;
-
   background: var(--contrast-color);
+}
+
+a:-webkit-any-link {
+  color: var(--alternate-color);
+  text-decoration: none;
+}
+
+/* FONT AWESOME */
+.fa-circle {
+  color: var(--contrast-opposite-color);
+  font-size: 14px !important;
+}
+
+.contrasted {
+  color: var(--contrast-color);
+}
+
+.alternate-contrasted {
+  color: var(--alternative-contrast-color);
 }
 
 /* GENERAL */
@@ -63,8 +87,16 @@ hr {
   align-items: center;
 }
 
-.space-between {
+.justify-space-between {
   justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.icon {
+  min-width: 22px;
 }
 
 /* LAYOUT */
@@ -74,20 +106,25 @@ hr {
 
 .resume {
   display: flex;
+  flex: 1;
   flex-direction: row;
+  align-items: flex-start;
 
   width: 800px;
   height: 1100px;
+  overflow: hidden;
 
   background-color: var(--main-bg-color);
-  box-shadow: 5px 5px 5px 5px #00000024;
+  box-shadow: 5px 5px 5px 5px var(--shadow-color);
 }
 
 .side-container,
 .page-container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  flex-direction: column;
   position: relative;
-
-  padding: 0 0 25px 0;
 }
 
 .side-container .column,
@@ -97,64 +134,65 @@ hr {
 }
 
 .side-container {
-  display: flex;
-  flex: 5;
+  min-width: 270px;
 
   background-color: var(--alternate-bg-color);
 }
 
 .page-container {
-  display: flex;
-  flex-direction: column;
   flex: 10;
 }
 
+.side,
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 0 25px 0;
+}
+
 .head {
-  height: 250px;
-  padding-bottom: 20px;
+  height: 270px;
 }
 
 .profile,
 .details {
-  padding: 50px 10px 0 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 35px 10px 0 10px;
+}
+
+.page hr {
+  position: absolute;
+  right: 0;
 }
 
 /* SIDE */
 .side {
-  display: flex;
-  flex-direction: column;
-
   color: var(--alternate-color);
 }
 
 .side h1 {
-  color: #fff;
+  color: var(--alternate-contrast-color);
 }
 
 .mugshot {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+
+  background: url("https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg");
+  background-size: 100% 100%, cover;
+
+  border-radius: 0 0 50% 50%;
 }
 
 .mugshot img {
   width: 100%;
-}
-
-.profile {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.fa-circle {
-  color: black;
-  font-size: 14px !important;
-}
-
-.enabled {
-  color: var(--contrast-color);
 }
 
 .name {
@@ -162,12 +200,10 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  margin-bottom: 100px;
 }
 
 .name h1 {
-  color: #26252d;
+  color: var(--main-contrast-color);
   font-size: 40px;
   font-weight: normal;
   font-family: arial;
@@ -179,8 +215,7 @@ hr {
 .name p {
   font-size: 32px;
   text-transform: uppercase;
-  color: black;
-  padding: 0px;
+  color: var(--main-color);
   margin: 0px;
 }
 
@@ -195,27 +230,29 @@ hr {
   margin-bottom: -11px !important;
 }
 
-.page {
-  padding: 0 20px 0 60px;
+.job {
+  padding-top: 15px;
+}
+
+/* DETAILS */
+.section {
+  padding-left: 25px;
+}
+
+.entry {
   position: relative;
 }
 
-.page hr {
+.bullet::after {
   position: absolute;
-  right: 0;
+  left: 16.5px;
+  width: 2px;
+  height: 100%;
+  content: "";
+  background-color: var(--contrast-color);
 }
 
-.head {
-  color: var(--main-color);
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0px;
-  letter-spacing: 5px;
-  letter-spacing: 5px;
-  font-family: arial;
-}
-
-.para-1 {
+/* .para-1 {
   font-size: 16px;
   text-transform: uppercase;
   color: #000;
@@ -250,4 +287,4 @@ hr {
   font-weight: 400;
   margin-bottom: 20px;
   margin-top: 0px;
-}
+} */
