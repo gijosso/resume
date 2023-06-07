@@ -1,6 +1,6 @@
 /* VARIABLES */
 :root {
-  --main-bg-color: #ffffff;
+  --main-bg-color: #f7faff;
   --main-color: #000000;
   --main-contrast-color: #26252d;
 
@@ -11,6 +11,9 @@
   --contrast-color: #f78c6c;
   --contrast-opposite-color: #a9b7c6;
   --alternative-contrast-color: #34b198;
+
+  --wildcard-color: #a9b7c6;
+  /* --wildcard-color-rgb: 180, 180, 180; */
 
   --shadow-color: #00000024;
 }
@@ -46,8 +49,8 @@ p {
 }
 
 hr {
-  height: 6px;
-  width: 322px;
+  height: 5px;
+  width: 320px;
   border: none;
   background: var(--contrast-color);
 }
@@ -65,6 +68,10 @@ a:-webkit-any-link {
 
 .contrasted {
   color: var(--contrast-color);
+}
+
+.discreet {
+  color: var(--alternate-color);
 }
 
 .alternate-contrasted {
@@ -127,12 +134,6 @@ a:-webkit-any-link {
   position: relative;
 }
 
-.side-container .column,
-.page-container .column {
-  padding: 10px 5px;
-  margin: 5px;
-}
-
 .side-container {
   min-width: 270px;
 
@@ -168,6 +169,11 @@ a:-webkit-any-link {
 .page hr {
   position: absolute;
   right: 0;
+}
+
+.column {
+  padding: 10px 5px;
+  margin: 5px;
 }
 
 /* SIDE */
@@ -209,7 +215,7 @@ a:-webkit-any-link {
   font-family: arial;
   letter-spacing: 10px;
 
-  margin: 7px;
+  margin: 5px;
 }
 
 .name p {
@@ -227,7 +233,7 @@ a:-webkit-any-link {
   font-family: "Raleway" !important;
   margin: 0px;
   padding: 0px;
-  margin-bottom: -11px !important;
+  margin-bottom: -10px !important;
 }
 
 .job {
@@ -239,8 +245,19 @@ a:-webkit-any-link {
   padding-left: 25px;
 }
 
+.section p {
+  line-height: 18px;
+  margin: 0;
+  padding: 10px 0;
+}
+
 .entry {
   position: relative;
+  padding-bottom: 10px;
+}
+
+.entry .column:first-child {
+  margin-top: 8px;
 }
 
 .bullet::after {
@@ -250,6 +267,23 @@ a:-webkit-any-link {
   height: 100%;
   content: "";
   background-color: var(--contrast-color);
+}
+
+.row .technology-list {
+  gap: 3px;
+}
+
+.technology {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 2px;
+
+  font-size: 12px;
+  color: var(--wildcard-color);
+  border: var(--wildcard-color) 1px solid;
+  /* background-color: rgba(var(--wildcard-color-rgb), 5%); */
+  border-radius: 3px;
 }
 
 /* .para-1 {
