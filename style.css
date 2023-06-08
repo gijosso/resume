@@ -22,6 +22,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Raleway", sans-serif;
+  background-color: var(--main-bg-color);
 }
 
 h1 {
@@ -108,12 +109,12 @@ a:-webkit-any-link {
   flex-direction: row;
   align-items: flex-start;
 
-  width: 800px;
-  height: 1100px;
+  /* width: 800px;
+  height: 1100px; */
   overflow: hidden;
 
   background-color: var(--main-bg-color);
-  box-shadow: 5px 5px 5px 5px var(--shadow-color);
+  /* box-shadow: 5px 5px 5px 5px var(--shadow-color); */
 }
 
 .side-container,
