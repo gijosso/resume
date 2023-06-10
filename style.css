@@ -108,26 +108,26 @@ a:-webkit-any-link {
   flex: 1;
   flex-direction: row;
   align-items: flex-start;
-
-  /* width: 800px;
-  height: 1100px; */
   overflow: hidden;
 
   background-color: var(--main-bg-color);
+  /* width: 800px;
+  height: 1100px; */
   /* box-shadow: 5px 5px 5px 5px var(--shadow-color); */
 }
 
 .side-container,
 .page-container {
+  position: relative;
   display: flex;
   flex: 1;
   height: 100%;
   flex-direction: column;
-  position: relative;
 }
 
 .side-container {
   min-width: 270px;
+  overflow: hidden;
 
   background-color: var(--alternate-bg-color);
 }
@@ -177,20 +177,41 @@ a:-webkit-any-link {
   color: var(--alternate-contrast-color);
 }
 
-.mugshot {
+.mugshot-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
   overflow: hidden;
 
-  background: url("https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg");
-  background-size: 100% 100%, cover;
-
   border-radius: 0 0 50% 50%;
+  background: var(--contrast-color);
+  border: var(--contrast-color) 1px solid;
 }
 
-.mugshot img {
+.anonymous {
+  width: 0;
+  background: none;
+  border-radius: initial;
+
+  box-sizing: border-box;
+  border-right: 136px solid var(--contrast-color);
+  border-bottom: 68px solid transparent;
+  border-left: 136px solid var(--contrast-color);
+}
+
+.mugshot {
+  height: 100%;
   width: 100%;
+  background-image: url("./public/me.png");
+  background-size: 100% 100%, cover;
+}
+
+.anonymous .mugshot {
+  display: none;
+  width: 0;
+  height: 0;
+  background-image: none;
 }
 
 .name {
