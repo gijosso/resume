@@ -21,8 +21,8 @@
   --shadow-color: #00000024;
 
   --doc-width: 800px;
-  --doc-height: 1100px;
-  --head-size: 270px;
+  --doc-height: 1120px;
+  --head-size: 250px;
   --mugshot-size: 270px;
 }
 
@@ -135,7 +135,7 @@ a:-webkit-any-link {
 .side-container {
   flex: 1;
   min-width: 270px;
-  min-height: var(--doc-height);
+  height: var(--doc-height);
 
   background-color: var(--alternate-bg-color);
 }
@@ -143,7 +143,7 @@ a:-webkit-any-link {
 .page-container {
   flex: 10;
   min-width: 530px;
-  min-height: var(--max-height);
+  height: var(--doc-height);
 }
 
 .side,
@@ -151,7 +151,7 @@ a:-webkit-any-link {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 0 0 25px 0;
+  height: var(--doc-height);
 }
 
 .head {
@@ -163,9 +163,9 @@ a:-webkit-any-link {
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  padding: 25px 10px 0 10px;
+  padding: 25px 10px 15px 10px;
 }
 
 .page hr {
@@ -211,8 +211,8 @@ a:-webkit-any-link {
 }
 
 .mugshot {
-  height: var(--mugshot-size);
-  width: var(--mugshot-size);
+  height: var(--head-size);
+  width: var(--head-size);
   background-image: url("./public/me.png");
   background-size: 100% 100%, cover;
   background-repeat: no-repeat;
@@ -276,11 +276,24 @@ a:-webkit-any-link {
 
 .section .column {
   padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.section .column .entry:not(:last-child) {
+  padding-bottom: 25px;
+}
+
+.section .column .entry:not(:last-child) .bullet::after {
+  position: absolute;
+  left: 16.5px;
+  width: 2px;
+  height: 100%;
+  content: "";
+  background-color: var(--contrast-color);
 }
 
 .entry {
   position: relative;
-  padding-bottom: 10px;
 }
 
 .entry .bullet {
@@ -289,15 +302,6 @@ a:-webkit-any-link {
 
 .entry .description {
   flex: 1;
-}
-
-.trailing::after {
-  position: absolute;
-  left: 16.5px;
-  width: 2px;
-  height: 100%;
-  content: "";
-  background-color: var(--contrast-color);
 }
 
 .row .technology-list {
