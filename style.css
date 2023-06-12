@@ -22,8 +22,8 @@
 
   --doc-width: 800px;
   --doc-height: 1122px;
+  --side-size: 270px;
   --head-size: 250px;
-  --mugshot-size: 270px;
 }
 
 /* ELEMENTS */
@@ -134,7 +134,7 @@ a:-webkit-any-link {
 
 .side-container {
   flex: 1;
-  min-width: 270px;
+  min-width: var(--side-size);
   height: var(--doc-height);
 
   background-color: var(--alternate-bg-color);
@@ -142,7 +142,7 @@ a:-webkit-any-link {
 
 .page-container {
   flex: 10;
-  min-width: 530px;
+  min-width: calc(var(--doc-width) - var(--side-size));
   height: var(--doc-height);
 }
 
@@ -205,9 +205,9 @@ a:-webkit-any-link {
   border-radius: initial;
 
   box-sizing: border-box;
-  border-right: 136px solid var(--contrast-color);
-  border-bottom: 68px solid transparent;
-  border-left: 136px solid var(--contrast-color);
+  border-right: calc(var(--side-size) / 2 + 1px) solid var(--contrast-color);
+  border-bottom: calc(var(--side-size) * 0.25 + 1px) solid transparent;
+  border-left: calc(var(--side-size) * 0.5 + 1px) solid var(--contrast-color);
 }
 
 .mugshot {
@@ -304,8 +304,14 @@ a:-webkit-any-link {
   flex: 1;
 }
 
+.description .row {
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+}
+
 .row .technology-list {
   gap: 3px;
+  flex-wrap: wrap;
 }
 
 .technology {
@@ -348,5 +354,48 @@ a:-webkit-any-link {
 
   .resume-container {
     box-shadow: 5px 5px 5px 5px var(--shadow-color);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --head-size: 220px;
+  }
+
+  body {
+    width: auto;
+    height: auto;
+  }
+
+  .resume-container {
+    max-width: unset;
+    max-height: unset;
+  }
+
+  .resume {
+    flex-direction: column-reverse;
+  }
+
+  .page-container {
+    min-width: auto;
+  }
+
+  .side .head {
+    display: none;
+  }
+
+  .profile,
+  .details {
+    padding: 0 5px 10px 5px;
+  }
+
+  .profile {
+    flex-direction: row;
+    column-count: 2;
+    flex-wrap: wrap;
+  }
+
+  .section {
+    padding-left: 0;
   }
 }
