@@ -111,9 +111,6 @@ a:-webkit-any-link {
   overflow: hidden;
 
   background-color: var(--main-bg-color);
-  /* width: 800px;
-  height: 1100px; */
-  /* box-shadow: 5px 5px 5px 5px var(--shadow-color); */
 }
 
 .side-container,
@@ -304,4 +301,72 @@ a:-webkit-any-link {
   color: var(--wildcard-color);
   border: var(--wildcard-color) 1px solid;
   border-radius: 3px;
+}
+
+/* SHOWCASE */
+@media screen and (min-width: 800px) {
+  body {
+    display: flex;
+    flex: 1;
+    width: 100vw;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resume {
+    max-width: 800px;
+    box-shadow: 5px 5px 5px 5px var(--shadow-color);
+  }
+}
+
+@media screen and (min-height: 1100px) {
+  body {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resume {
+    max-height: 1100px;
+    box-shadow: 5px 5px 5px 5px var(--shadow-color);
+  }
+}
+
+@media screen and (max-width: 799px) {
+  body {
+    display: initial;
+    flex: initial;
+    width: initial;
+
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  .resume {
+    max-width: initial;
+    max-height: initial;
+    box-shadow: initial;
+  }
+}
+
+@media screen and (max-height: 1099px) {
+  body {
+    display: initial;
+    flex: initial;
+    /* width: 100vw; */
+    height: initial;
+
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  .resume {
+    max-width: initial;
+    max-height: initial;
+    box-shadow: initial;
+  }
 }
