@@ -45,7 +45,6 @@ p {
   font-weight: 300;
   font-size: 12px;
   letter-spacing: 1px;
-  line-height: 23px;
   color: var(--alternate-color);
 }
 
@@ -166,7 +165,7 @@ a:-webkit-any-link {
   flex-direction: column;
   justify-content: space-around;
 
-  padding: 15px 10px 0 10px;
+  padding: 25px 10px 0 10px;
 }
 
 .page hr {
@@ -239,15 +238,12 @@ a:-webkit-any-link {
   font-weight: normal;
   font-family: arial;
   letter-spacing: 10px;
-
-  margin: 5px;
 }
 
 .name p {
   font-size: 32px;
   text-transform: uppercase;
   color: var(--main-color);
-  margin: 0px;
 }
 
 .name hr {
@@ -256,13 +252,15 @@ a:-webkit-any-link {
 
 .firstname {
   font-family: "Raleway" !important;
-  margin: 0px;
-  padding: 0px;
-  margin-bottom: -10px !important;
+  padding: 0;
+}
+
+.lastname {
+  margin: 5px;
 }
 
 .job {
-  padding-top: 15px;
+  margin: 0;
 }
 
 /* DETAILS */
