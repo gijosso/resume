@@ -19,6 +19,10 @@
   --wildcard-color: #a9b7c6;
 
   --shadow-color: #00000024;
+
+  --doc-width: 800px;
+  --doc-height: 1100px;
+  --mugshot-size: 270px;
 }
 
 /* ELEMENTS */
@@ -105,8 +109,8 @@ a:-webkit-any-link {
 /* LAYOUT */
 .resume-container {
   padding: 0;
-  max-width: 800px;
-  max-height: 1100px;
+  max-width: var(--doc-width);
+  max-height: var(--doc-height);
   overflow: hidden;
 }
 
@@ -131,7 +135,7 @@ a:-webkit-any-link {
 .side-container {
   flex: 1;
   min-width: 270px;
-  min-height: 1100px;
+  min-height: var(--doc-height);
 
   background-color: var(--alternate-bg-color);
 }
@@ -139,7 +143,7 @@ a:-webkit-any-link {
 .page-container {
   flex: 10;
   min-width: 530px;
-  min-height: 1100px;
+  min-height: var(--max-height);
 }
 
 .side,
@@ -207,10 +211,11 @@ a:-webkit-any-link {
 }
 
 .mugshot {
-  height: 100%;
-  width: 100%;
+  height: var(--mugshot-size);
+  width: var(--mugshot-size);
   background-image: url("./public/me.png");
   background-size: 100% 100%, cover;
+  background-repeat: no-repeat;
 }
 
 .anonymous .mugshot {
