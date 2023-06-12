@@ -1,4 +1,8 @@
 /* VARIABLES */
+@page {
+  size: A4 portrait;
+}
+
 :root {
   --main-bg-color: #f7faff;
   --main-color: #000000;
@@ -101,6 +105,9 @@ a:-webkit-any-link {
 /* LAYOUT */
 .resume-container {
   padding: 0;
+  max-width: 800px;
+  max-height: 1100px;
+  overflow: hidden;
 }
 
 .resume {
@@ -108,8 +115,6 @@ a:-webkit-any-link {
   flex: 1;
   flex-direction: row;
   align-items: flex-start;
-  overflow: hidden;
-
   background-color: var(--main-bg-color);
 }
 
@@ -120,17 +125,21 @@ a:-webkit-any-link {
   flex: 1;
   height: 100%;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .side-container {
+  flex: 1;
   min-width: 270px;
-  overflow: hidden;
+  min-height: 1100px;
 
   background-color: var(--alternate-bg-color);
 }
 
 .page-container {
   flex: 10;
+  min-width: 530px;
+  min-height: 1100px;
 }
 
 .side,
@@ -150,7 +159,7 @@ a:-webkit-any-link {
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   padding: 35px 10px 0 10px;
 }
@@ -304,7 +313,7 @@ a:-webkit-any-link {
 }
 
 /* SHOWCASE */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 801px) {
   body {
     display: flex;
     flex: 1;
@@ -314,13 +323,12 @@ a:-webkit-any-link {
     align-items: center;
   }
 
-  .resume {
-    max-width: 800px;
+  .resume-container {
     box-shadow: 5px 5px 5px 5px var(--shadow-color);
   }
 }
 
-@media screen and (min-height: 1100px) {
+@media screen and (min-height: 1101px) {
   body {
     display: flex;
     flex: 1;
@@ -330,43 +338,7 @@ a:-webkit-any-link {
     align-items: center;
   }
 
-  .resume {
-    max-height: 1100px;
+  .resume-container {
     box-shadow: 5px 5px 5px 5px var(--shadow-color);
-  }
-}
-
-@media screen and (max-width: 799px) {
-  body {
-    display: initial;
-    flex: initial;
-    width: initial;
-
-    justify-content: initial;
-    align-items: initial;
-  }
-
-  .resume {
-    max-width: initial;
-    max-height: initial;
-    box-shadow: initial;
-  }
-}
-
-@media screen and (max-height: 1099px) {
-  body {
-    display: initial;
-    flex: initial;
-    /* width: 100vw; */
-    height: initial;
-
-    justify-content: initial;
-    align-items: initial;
-  }
-
-  .resume {
-    max-width: initial;
-    max-height: initial;
-    box-shadow: initial;
   }
 }
