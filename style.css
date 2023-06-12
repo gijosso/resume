@@ -60,6 +60,10 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
+.mobile {
+  display: none !important;
+}
+
 /* FONT AWESOME */
 .fa-circle {
   color: var(--contrast-opposite-color);
@@ -96,6 +100,14 @@ a:-webkit-any-link {
 
 .justify-space-between {
   justify-content: space-between;
+}
+
+.no-break > div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
 }
 
 .align-start {
@@ -263,6 +275,11 @@ a:-webkit-any-link {
   margin: 0;
 }
 
+.job::before,
+.job::after {
+  content: " - ";
+}
+
 /* DETAILS */
 .section {
   padding-left: 25px;
@@ -318,6 +335,7 @@ a:-webkit-any-link {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  column-gap: 2px;
   padding: 2px;
 
   font-size: 12px;
@@ -380,6 +398,16 @@ a:-webkit-any-link {
     min-width: auto;
   }
 
+  .side-container,
+  .page-container {
+    height: auto;
+  }
+
+  .side,
+  .page {
+    height: auto;
+  }
+
   .side .head {
     display: none;
   }
@@ -395,7 +423,19 @@ a:-webkit-any-link {
     flex-wrap: wrap;
   }
 
+  .profile .column {
+    flex: 1;
+  }
+
   .section {
     padding-left: 0;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: inherit !important;
   }
 }
