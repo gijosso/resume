@@ -5,10 +5,12 @@
 
 :root {
   --main-bg-color: #f7faff;
+  --main-bg-color-rgb: 247, 250, 255;
   --main-color: #000000;
   --main-contrast-color: #26252d;
 
   --alternate-bg-color: #282c34;
+  --alternate-bg-color-rgb: 40, 44, 52;
   --alternate-color: #a9b7c6;
   --alternate-contrast-color: #ffffff;
 
@@ -392,6 +394,13 @@ a:-webkit-any-link {
   body {
     width: auto;
     height: auto;
+
+    background: rgb(var(--main-bg-color-rgb));
+    background: linear-gradient(
+      180deg,
+      rgba(var(--main-bg-color-rgb), 1) 0%,
+      rgba(var(--alternate-bg-color-rgb), 1) 50%
+    );
   }
 
   hr {
