@@ -107,7 +107,7 @@ a:-webkit-any-link {
   flex-direction: row;
   column-gap: 5px;
   flex-wrap: nowrap;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .align-start {
@@ -252,7 +252,7 @@ a:-webkit-any-link {
   letter-spacing: 10px;
 }
 
-.name p {
+.name div {
   font-size: 32px;
   text-transform: uppercase;
   color: var(--main-color);
@@ -319,11 +319,6 @@ a:-webkit-any-link {
 
 .entry .description {
   flex: 1;
-}
-
-.description .row {
-  flex-wrap: nowrap;
-  text-wrap: nowrap;
 }
 
 .row .technology-list {
