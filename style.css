@@ -33,7 +33,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Raleway", sans-serif;
-  background: var(--main-bg-color);
+  background-color: var(--main-bg-color);
 }
 
 h1 {
@@ -395,8 +395,7 @@ a:-webkit-any-link {
     width: auto;
     height: auto;
 
-    background: rgb(var(--main-bg-color-rgb));
-    background: linear-gradient(
+    background-color: linear-gradient(
       180deg,
       rgba(var(--main-bg-color-rgb), 1) 50%,
       rgba(var(--alternate-bg-color-rgb), 1) 50%
