@@ -394,14 +394,6 @@ a:-webkit-any-link {
     --head-size: 220px;
   }
 
-  html {
-    background: linear-gradient(
-      180deg,
-      rgba(var(--main-bg-color-rgb), 1) 50%,
-      rgba(var(--alternate-bg-color-rgb), 1) 50%
-    );
-  }
-
   body {
     width: auto;
     height: auto;
@@ -418,6 +410,11 @@ a:-webkit-any-link {
 
   .resume {
     flex-direction: column-reverse;
+    background: linear-gradient(
+      180deg,
+      rgba(var(--main-bg-color-rgb), 1) 50%,
+      rgba(var(--alternate-bg-color-rgb), 1) 50%
+    );
   }
 
   .page-container {
