@@ -416,6 +416,7 @@ a:-webkit-any-link {
   body {
     width: auto;
     height: auto;
+    background-color: var(--alternate-bg-color);
   }
 
   hr {
