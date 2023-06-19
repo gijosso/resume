@@ -305,6 +305,7 @@ a:-webkit-any-link {
   line-height: 18px;
   margin: 0;
   padding: 10px 0;
+  color: var(--main-contrast-color);
 }
 
 .section .column {
