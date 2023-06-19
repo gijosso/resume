@@ -393,7 +393,7 @@ a:-webkit-any-link {
   }
 
   html {
-    background-color: linear-gradient(
+    background: linear-gradient(
       180deg,
       rgba(var(--main-bg-color-rgb), 1) 50%,
       rgba(var(--alternate-bg-color-rgb), 1) 50%
