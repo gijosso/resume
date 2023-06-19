@@ -393,8 +393,7 @@ a:-webkit-any-link {
     --head-size: 220px;
   }
 
-  body {
-    background-color: var(--main-bg-color);
+  html {
     background: rgb(var(--main-bg-color-rgb));
     background: -moz-linear-gradient(
       180deg,
