@@ -393,30 +393,14 @@ a:-webkit-any-link {
     --head-size: 220px;
   }
 
-  html {
-    background: rgb(var(--main-bg-color-rgb));
-    background: -moz-linear-gradient(
-      180deg,
-      rgba(var(--main-bg-color-rgb), 1) 50%,
-      rgba(var(--alternate-bg-color-rgb), 1) 50%
-    );
-    background: -webkit-linear-gradient(
-      180deg,
-      rgba(var(--main-bg-color-rgb), 1) 50%,
-      rgba(var(--alternate-bg-color-rgb), 1) 50%
-    );
-    background: linear-gradient(
-      180deg,
-      rgba(var(--main-bg-color-rgb), 1) 50%,
-      rgba(var(--alternate-bg-color-rgb), 1) 50%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-bg-color), endColorstr=var(--alternate-bg-color), GradientType=1);
-  }
-
   body {
     width: auto;
     height: auto;
-    background-color: var(--alternate-bg-color);
+    background-color: linear-gradient(
+      180deg,
+      rgba(var(--main-bg-color-rgb), 1) 50%,
+      rgba(var(--alternate-bg-color-rgb), 1) 50%
+    );
   }
 
   hr {
