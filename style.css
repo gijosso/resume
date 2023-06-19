@@ -5,12 +5,12 @@
 
 :root {
   --main-bg-color: #f7faff;
-  --main-bg-color-rgb: 247, 250, 255;
+  --main-bg-color-rgb: var(--main-bg-color-rgb);
   --main-color: #000000;
   --main-contrast-color: #26252d;
 
   --alternate-bg-color: #282c34;
-  --alternate-bg-color-rgb: 40, 44, 52;
+  --alternate-bg-color-rgb: var(--alternate-bg-color-rgb);
   --alternate-color: #a9b7c6;
   --alternate-contrast-color: #ffffff;
 
@@ -53,7 +53,7 @@ hr {
   height: 5px;
   width: 60%;
   border: none;
-  background: var(--contrast-color);
+  background-color: var(--contrast-color);
 }
 
 a:-webkit-any-link {
@@ -149,7 +149,7 @@ a:-webkit-any-link {
   min-width: var(--side-size);
   height: var(--doc-height);
 
-  background: var(--alternate-bg-color);
+  background-color: var(--alternate-bg-color);
 }
 
 .page-container {
@@ -167,7 +167,7 @@ a:-webkit-any-link {
 }
 
 .page {
-  background: var(--main-bg-color);
+  background-color: var(--main-bg-color);
 }
 
 .head {
@@ -211,7 +211,7 @@ a:-webkit-any-link {
   overflow: hidden;
 
   border-radius: 0 0 var(--head-size) var(--head-size);
-  background: var(--contrast-color);
+  background-color: var(--contrast-color);
   border: var(--contrast-color) 1px solid;
 }
 
@@ -398,11 +398,23 @@ a:-webkit-any-link {
   body,
   .resume,
   .resume-container {
+    background: rgb(var(--main-bg-color-rgb));
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(var(--main-bg-color-rgb), 1) 50%,
+      rgba(var(--alternate-bg-color-rgb), 1) 50%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(var(--main-bg-color-rgb), 1) 50%,
+      rgba(var(--alternate-bg-color-rgb), 1) 50%
+    );
     background: linear-gradient(
       180deg,
       rgba(var(--main-bg-color-rgb), 1) 50%,
       rgba(var(--alternate-bg-color-rgb), 1) 50%
     );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-bg-color), endColorstr=var(--alternate-bg-color), GradientType=1);
   }
 
   body {
