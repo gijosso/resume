@@ -33,7 +33,6 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Raleway", sans-serif;
-  background-color: var(--main-bg-color);
 }
 
 h1 {
@@ -133,7 +132,6 @@ a:-webkit-any-link {
   flex: 1;
   flex-direction: row;
   align-items: flex-start;
-  background-color: var(--main-bg-color);
 }
 
 .side-container,
@@ -151,7 +149,7 @@ a:-webkit-any-link {
   min-width: var(--side-size);
   height: var(--doc-height);
 
-  background-color: var(--alternate-bg-color);
+  background: var(--alternate-bg-color);
 }
 
 .page-container {
@@ -166,6 +164,10 @@ a:-webkit-any-link {
   flex: 1;
   flex-direction: column;
   height: var(--doc-height);
+}
+
+.page {
+  background: var(--main-bg-color);
 }
 
 .head {
@@ -393,7 +395,7 @@ a:-webkit-any-link {
   }
 
   html {
-    background-color: linear-gradient(
+    background: linear-gradient(
       180deg,
       rgba(var(--main-bg-color-rgb), 1) 50%,
       rgba(var(--alternate-bg-color-rgb), 1) 50%
