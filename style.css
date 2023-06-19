@@ -150,7 +150,7 @@ a:-webkit-any-link {
   min-width: var(--side-size);
   height: var(--doc-height);
 
-  background-color: var(--alternate-bg-color);
+  /* background-color: var(--alternate-bg-color); */
 }
 
 .page-container {
@@ -168,7 +168,7 @@ a:-webkit-any-link {
 }
 
 .page {
-  background-color: var(--main-bg-color);
+  /* background-color: var(--main-bg-color); */
 }
 
 .head {
