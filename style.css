@@ -5,12 +5,12 @@
 
 :root {
   --main-bg-color: #f7faff;
-  --main-bg-color-rgb: var(--main-bg-color-rgb);
+  --main-bg-color-rgb: 247, 250, 255;
   --main-color: #000000;
   --main-contrast-color: #26252d;
 
   --alternate-bg-color: #282c34;
-  --alternate-bg-color-rgb: var(--alternate-bg-color-rgb);
+  --alternate-bg-color-rgb: 40, 44, 52;
   --alternate-color: #a9b7c6;
   --alternate-contrast-color: #ffffff;
 
@@ -157,6 +157,8 @@ a:-webkit-any-link {
   flex: 10;
   min-width: calc(var(--doc-width) - var(--side-size));
   height: var(--doc-height);
+
+  background-color: var(--main-bg-color);
 }
 
 .side,
@@ -165,10 +167,6 @@ a:-webkit-any-link {
   flex: 1;
   flex-direction: column;
   height: var(--doc-height);
-}
-
-.page {
-  /* background-color: var(--main-bg-color); */
 }
 
 .head {
@@ -395,10 +393,8 @@ a:-webkit-any-link {
     --head-size: 220px;
   }
 
-  html,
-  body,
-  .resume,
-  .resume-container {
+  html {
+    background-color: var(--main-bg-color);
     background: rgb(var(--main-bg-color-rgb));
     background: -moz-linear-gradient(
       180deg,
