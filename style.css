@@ -8,11 +8,11 @@
   --main-bg-color-rgb: 247, 250, 255;
   --main-color: #000000;
   --main-contrast-color: #26252d;
+  --title-color: #ffffff;
 
-  --alternate-bg-color: #282c34;
-  --alternate-bg-color-rgb: 40, 44, 52;
-  --alternate-color: #a9b7c6;
-  --alternate-contrast-color: #ffffff;
+  --alternative-bg-color: #282c34;
+  --alternative-bg-color-rgb: 40, 44, 52;
+  --alternative-color: #a9b7c6;
 
   --contrast-color: #f78c6c;
   --contrast-opposite-color: #a9b7c6;
@@ -46,7 +46,7 @@ p {
   font-weight: 300;
   font-size: 12px;
   letter-spacing: 1px;
-  color: var(--alternate-color);
+  color: var(--alternative-color);
 }
 
 hr {
@@ -57,7 +57,7 @@ hr {
 }
 
 a:-webkit-any-link {
-  color: var(--alternate-color);
+  color: var(--alternative-color);
   text-decoration: none;
 }
 
@@ -76,7 +76,7 @@ a:-webkit-any-link {
 }
 
 .discreet {
-  color: var(--alternate-color);
+  color: var(--alternative-color);
 }
 
 .alternate-contrasted {
@@ -119,6 +119,16 @@ a:-webkit-any-link {
   min-width: 22px;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  width: 125px;
+  padding: 10px 5px;
+  color: var(--title-color);
+  background: var(--contrast-color);
+  border-radius: 5px;
+}
+
 /* LAYOUT */
 .resume-container {
   padding: 0;
@@ -149,12 +159,12 @@ a:-webkit-any-link {
   min-width: var(--side-size);
   height: var(--doc-height);
 
-  background-color: var(--alternate-bg-color);
+  background-color: var(--alternative-bg-color);
 }
 
 .page-container {
   flex: 10;
-  min-width: calc(var(--doc-width) - var(--side-size));
+  /* min-width: calc(var(--doc-width) - var(--side-size)); */
   height: var(--doc-height);
 
   background-color: var(--main-bg-color);
@@ -192,13 +202,18 @@ a:-webkit-any-link {
   margin: 5px;
 }
 
+/* INDEX */
+.file-entry {
+  gap: 50px;
+}
+
 /* SIDE */
 .side {
-  color: var(--alternate-color);
+  color: var(--alternative-color);
 }
 
 .side h1 {
-  color: var(--alternate-contrast-color);
+  color: var(--title-color);
 }
 
 .mugshot-container {
@@ -396,7 +411,7 @@ a:-webkit-any-link {
     background: linear-gradient(
       180deg,
       rgba(var(--main-bg-color-rgb), 1) 50%,
-      rgba(var(--alternate-bg-color-rgb), 1) 50%
+      rgba(var(--alternative-bg-color-rgb), 1) 50%
     );
   }
 
