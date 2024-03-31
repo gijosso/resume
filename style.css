@@ -429,10 +429,6 @@ a:-webkit-any-link {
 }
 
 @media only screen and (max-width: 800px) {
-  :root {
-    --head-size: 220px;
-  }
-
   .document-html {
     background-color: var(--main-bg-color);
     background: rgb(247, 250, 255);
