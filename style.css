@@ -67,6 +67,10 @@ hr {
   background-color: var(--contrast-color);
 }
 
+.hr-row {
+  height: 25px;
+}
+
 a:-webkit-any-link {
   color: var(--alternative-color);
   text-decoration: none;
