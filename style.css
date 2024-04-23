@@ -23,8 +23,6 @@
   --contrast-opposite-color: #a9b7c6;
   --alternative-contrast-color: #34b198;
 
-  --wildcard-color: #a9b7c6;
-
   --shadow-color: #00000024;
 
   --github-color: #6e5494;
@@ -32,8 +30,8 @@
   --twitter-color: #1da1f2;
   --twitter-x-color: #000000;
 
-  --doc-width: 800px;
-  --doc-height: 1122px;
+  --doc-width: 210mm;
+  --doc-height: 297mm;
   --side-size: 270px;
   --head-size: 250px;
 }
@@ -72,7 +70,7 @@ hr {
 }
 
 a:-webkit-any-link {
-  color: var(--alternative-color);
+  color: inherit;
   text-decoration: none;
 }
 
@@ -84,6 +82,14 @@ a:-webkit-any-link {
 .fa-circle {
   color: var(--contrast-opposite-color);
   font-size: 14px !important;
+}
+
+.main {
+  color: var(--main-color);
+}
+
+.main-contrast {
+  color: var(--main-contrast-color);
 }
 
 .contrasted {
@@ -160,7 +166,7 @@ a:-webkit-any-link {
   width: 125px;
   padding: 10px 5px;
   color: var(--title-color);
-  background: var(--contrast-color);
+  background: var(--alternative-contrast-color);
   border-radius: 5px;
 }
 
@@ -197,7 +203,6 @@ a:-webkit-any-link {
 
 .page-container {
   flex: 10;
-  /* min-width: calc(var(--doc-width) - var(--side-size)); */
   height: var(--doc-height);
 
   background-color: var(--main-bg-color);
@@ -212,7 +217,6 @@ a:-webkit-any-link {
   display: flex;
   flex: 1;
   flex-direction: column;
-  height: var(--doc-height);
 }
 
 .head {
@@ -354,7 +358,7 @@ a:-webkit-any-link {
 
 /* DETAILS */
 .section {
-  padding-left: 25px;
+  padding-left: 0;
 }
 
 .section p {
@@ -388,6 +392,7 @@ a:-webkit-any-link {
 
 .entry .bullet {
   margin-top: 8px;
+  padding-right: 20px;
 }
 
 .entry .description {
@@ -395,7 +400,7 @@ a:-webkit-any-link {
 }
 
 .row .technology-list {
-  gap: 3px;
+  gap: 4px;
   flex-wrap: wrap;
 }
 
@@ -404,11 +409,11 @@ a:-webkit-any-link {
   align-items: center;
   flex-wrap: nowrap;
   column-gap: 2px;
-  padding: 2px;
+  padding: 2px 4px;
 
   font-size: 12px;
-  color: var(--wildcard-color);
-  border: var(--wildcard-color) 1px solid;
+  color: var(--main-contrast-color);
+  border: var(--alternative-color) 1px solid;
   border-radius: 3px;
 }
 
