@@ -4,26 +4,18 @@
 }
 
 .sneaky-🥷 * {
-  background: var(--main-bg-color) !important;
-  color: var(--main-bg-color) !important;
+  background: var(--background) !important;
+  color: var(--background) !important;
 }
 
 :root {
-  --main-bg-color: #f7faff;
-  --main-bg-color-rgb: 247, 250, 255;
-  --main-color: #000000;
-  --main-contrast-color: #26252d;
-  --title-color: #ffffff;
-
-  --alternative-bg-color: #282c34;
-  --alternative-bg-color-rgb: 40, 44, 52;
-  --alternative-color: #a9b7c6;
-
-  --contrast-color: #f78c6c;
-  --contrast-opposite-color: #a9b7c6;
-  --alternative-contrast-color: #34b198;
-
-  --shadow-color: #00000024;
+  --color: #000000;
+  --background: #f7faff;
+  --alt-color: #a9b7c6;
+  --alt-background: #282c34;
+  --tint: #f78c6c;
+  --complementary-color: #ffffff;
+  --complementary-tint: #34b198;
 
   --github-color: #6e5494;
   --linkedin-color: #0077b5;
@@ -38,10 +30,10 @@
 
 /* ELEMENTS */
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
-  background-color: var(--main-bg-color);
+  background-color: var(--background);
 }
 
 h1 {
@@ -55,14 +47,14 @@ p {
   font-weight: 300;
   font-size: 12px;
   letter-spacing: 1px;
-  color: var(--alternative-color);
+  color: var(--color);
 }
 
 hr {
   height: 5px;
   width: 60%;
   border: none;
-  background-color: var(--contrast-color);
+  background-color: var(--tint);
 }
 
 .hr-row {
@@ -78,45 +70,41 @@ a:-webkit-any-link {
   display: none !important;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
 /* FONT AWESOME */
 .fa-circle {
-  color: var(--contrast-opposite-color);
+  color: var(--alt-color);
   font-size: 14px !important;
 }
 
-.main {
-  color: var(--main-color);
+.tint {
+  color: var(--tint);
 }
 
-.main-contrast {
-  color: var(--main-contrast-color);
+.complementary-tint {
+  color: var(--complementary-tint);
 }
 
-.contrasted {
-  color: var(--contrast-color);
-}
-
-.discreet {
-  color: var(--alternative-color);
-}
-
-.alternate-contrasted {
-  color: var(--alternative-contrast-color);
-}
-
-.github-colored {
+.github-color {
   color: var(--github-color);
 }
 
-.linkedin-colored {
+.linkedin-color {
   color: var(--linkedin-color);
 }
 
-.twitter-colored {
+.twitter-color {
   color: var(--twitter-color);
 }
 
-.x-colored {
+.x-color {
   color: var(--twitter-x-color);
 }
 
@@ -147,7 +135,7 @@ a:-webkit-any-link {
 .no-break > div {
   display: flex;
   flex-direction: row;
-  column-gap: 5px;
+  column-gap: 6px;
   flex-wrap: nowrap;
   white-space: nowrap;
 }
@@ -165,8 +153,8 @@ a:-webkit-any-link {
   justify-content: center;
   width: 125px;
   padding: 10px 5px;
-  color: var(--title-color);
-  background: var(--alternative-contrast-color);
+  color: var(--color);
+  background: var(--tint);
   border-radius: 5px;
 }
 
@@ -197,15 +185,13 @@ a:-webkit-any-link {
   flex: 1;
   min-width: var(--side-size);
   height: var(--doc-height);
-
-  background-color: var(--alternative-bg-color);
+  background-color: var(--alt-background);
 }
 
 .page-container {
   flex: 10;
   height: var(--doc-height);
-
-  background-color: var(--main-bg-color);
+  background-color: var(--background);
 }
 
 .index-page {
@@ -229,7 +215,6 @@ a:-webkit-any-link {
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-
   padding: 25px 10px 15px 10px;
 }
 
@@ -249,11 +234,11 @@ a:-webkit-any-link {
 
 /* SIDE */
 .side {
-  color: var(--alternative-color);
+  color: var(--alt-color);
 }
 
 .side h1 {
-  color: var(--title-color);
+  color: var(--complementary-color);
 }
 
 .mugshot-container {
@@ -262,16 +247,14 @@ a:-webkit-any-link {
   align-items: center;
   height: 100%;
   overflow: hidden;
-
   border-radius: 0 0 var(--head-size) var(--head-size);
-  background-color: var(--contrast-color);
-  border: var(--contrast-color) 1px solid;
+  background-color: var(--tint);
+  border: var(--tint) 1px solid;
 }
 
 .anonymous {
-  background: var(--contrast-color);
+  background: var(--tint);
   border-radius: initial;
-
   box-sizing: border-box;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 0% 100%);
 }
@@ -299,7 +282,6 @@ a:-webkit-any-link {
 }
 
 .name h1 {
-  color: var(--main-contrast-color);
   font-size: 40px;
   font-weight: normal;
   font-family: arial;
@@ -309,7 +291,7 @@ a:-webkit-any-link {
 .name div {
   font-size: 32px;
   text-transform: uppercase;
-  color: var(--main-color);
+  color: var(--color);
 }
 
 .name hr {
@@ -332,7 +314,6 @@ a:-webkit-any-link {
   align-items: center;
   column-gap: 15px;
   width: 100%;
-
   margin: 0;
 }
 
@@ -365,7 +346,6 @@ a:-webkit-any-link {
   line-height: 18px;
   margin: 0;
   padding: 10px 0;
-  color: var(--main-contrast-color);
 }
 
 .section .column {
@@ -383,7 +363,12 @@ a:-webkit-any-link {
   width: 2px;
   height: 100%;
   content: "";
-  background-color: var(--contrast-color);
+  background-color: var(--tint);
+}
+
+#contact a:-webkit-any-link {
+  height: 25px;
+  line-height: 25px;
 }
 
 .entry {
@@ -399,6 +384,12 @@ a:-webkit-any-link {
   flex: 1;
 }
 
+.tag {
+  padding: 0 3px;
+  background-color: var(--tint);
+  border-radius: 3px;
+}
+
 .row .technology-list {
   gap: 4px;
   flex-wrap: wrap;
@@ -410,10 +401,8 @@ a:-webkit-any-link {
   flex-wrap: nowrap;
   column-gap: 2px;
   padding: 2px 4px;
-
   font-size: 12px;
-  color: var(--main-contrast-color);
-  border: var(--alternative-color) 1px solid;
+  border: var(--alt-color) 1px solid;
   border-radius: 3px;
 }
 
@@ -423,7 +412,6 @@ a:-webkit-any-link {
     display: flex;
     flex: 1;
     width: 100vw;
-
     justify-content: center;
     align-items: center;
   }
@@ -434,7 +422,6 @@ a:-webkit-any-link {
     display: flex;
     flex: 1;
     height: 100vh;
-
     justify-content: center;
     align-items: center;
   }
@@ -442,7 +429,7 @@ a:-webkit-any-link {
 
 @media only screen and (max-width: 800px) {
   .document-html {
-    background-color: var(--main-bg-color);
+    background-color: var(--background);
     background: rgb(247, 250, 255);
     background: -moz-linear-gradient(
       180deg,
