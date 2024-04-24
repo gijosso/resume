@@ -1,6 +1,6 @@
 User-agent: *
-Disallow: update-pdf.sh
-Disallow: CNAME
-Disallow: cv.pdf
-Disallow: resume.pdf
+Disallow: /update-pdf.sh
+Disallow: /CNAME
+Disallow: /cv.pdf
+Disallow: /resume.pdf
 Allow: /public/

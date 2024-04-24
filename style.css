@@ -366,6 +366,10 @@ a:-webkit-any-link {
   background-color: var(--tint);
 }
 
+#contact {
+  gap: 6px;
+}
+
 #contact a:-webkit-any-link {
   height: 25px;
   line-height: 25px;
