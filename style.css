@@ -215,7 +215,11 @@ a:-webkit-any-link {
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding: 25px 10px 15px 10px;
+  padding: 10px 10px 15px 10px;
+}
+
+#homepage {
+  padding: 40px 10px 15px 10px;
 }
 
 .page hr {
@@ -334,7 +338,11 @@ a:-webkit-any-link {
 }
 
 .socials div {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  width: 48px;
 }
 
 /* DETAILS */
@@ -380,8 +388,8 @@ a:-webkit-any-link {
 }
 
 .entry .bullet {
-  margin-top: 8px;
-  padding-right: 20px;
+  margin-top: 7px;
+  padding-right: 0;
 }
 
 .entry .description {
@@ -392,6 +400,10 @@ a:-webkit-any-link {
   padding: 0 3px;
   background-color: var(--tint);
   border-radius: 3px;
+}
+
+.complementary {
+  background-color: var(--complementary-tint);
 }
 
 .row .technology-list {
