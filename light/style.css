@@ -34,7 +34,6 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   background-color: var(--background);
-  font-size: 9.5pt;
 }
 
 h1 {
@@ -42,33 +41,12 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-h2 {
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding-left: 3px;
-  margin: 0;
-  font-size: 14px;
-  font-weight: bold;
-  background: var(--tint);
-}
-
-ul {
-  margin-block-start: 10px;
-  padding-inline-start: 20px;
-}
-
-li::marker {
-  color: var(--tint);
 }
 
 p {
   font-weight: 300;
-  /* letter-spacing: 1px; */
+  font-size: 12px;
+  letter-spacing: 1px;
   color: var(--color);
 }
 
@@ -167,7 +145,7 @@ a:-webkit-any-link {
 }
 
 .icon {
-  min-width: 15px;
+  min-width: 22px;
 }
 
 .button {
@@ -227,10 +205,6 @@ a:-webkit-any-link {
   flex-direction: column;
 }
 
-.page {
-  padding: 1.4cm;
-}
-
 .head {
   height: var(--head-size);
 }
@@ -240,10 +214,8 @@ a:-webkit-any-link {
   display: flex;
   flex: 1;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   padding: 10px 10px 15px 10px;
-  /* padding: 15px 0 10px 0; */
-  gap: 15px;
 }
 
 #homepage {
@@ -308,13 +280,13 @@ a:-webkit-any-link {
 
 .name {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .name h1 {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: normal;
   font-family: arial;
   letter-spacing: 10px;
@@ -362,10 +334,15 @@ a:-webkit-any-link {
 }
 
 .socials {
+  padding: 0 6px;
+}
+
+.socials div {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  font-size: 28px;
+  width: 48px;
 }
 
 /* DETAILS */
@@ -374,19 +351,19 @@ a:-webkit-any-link {
 }
 
 .section p {
-  /* line-height: 18px; */
+  line-height: 18px;
   margin: 0;
-  /* padding: 10px 0; */
+  padding: 10px 0;
 }
 
 .section .column {
-  padding: 0 0 5px 0;
-  margin: 5px 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-/* .section .column .entry:not(:last-child) {
+.section .column .entry:not(:last-child) {
   padding-bottom: 25px;
-} */
+}
 
 .section .column .entry:not(:last-child) .bullet::after {
   position: absolute;
@@ -515,6 +492,11 @@ a:-webkit-any-link {
     display: none;
   }
 
+  .profile,
+  .details {
+    padding: 15px 0 10px 0;
+  }
+
   .profile {
     flex-direction: row;
     column-count: 2;
@@ -535,6 +517,15 @@ a:-webkit-any-link {
 
   .section {
     padding-left: 0;
+  }
+
+  .section .column {
+    padding-top: 0;
+    margin: 0;
+  }
+
+  .entry .description {
+    padding: 10px 0;
   }
 
   .desktop {
