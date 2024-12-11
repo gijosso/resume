@@ -538,6 +538,7 @@ a:-webkit-any-link {
   .side,
   .page {
     height: auto;
+    padding: 0;
   }
 
   .side .head {
