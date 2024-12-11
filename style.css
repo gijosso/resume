@@ -311,10 +311,11 @@ a:-webkit-any-link {
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .name h1 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: normal;
   font-family: arial;
   letter-spacing: 10px;
@@ -369,6 +370,14 @@ a:-webkit-any-link {
 }
 
 /* DETAILS */
+.section-row {
+  gap: 15px;
+}
+
+.section-row > div {
+  flex: 1;
+}
+
 .section {
   padding-left: 0;
 }
@@ -421,7 +430,7 @@ a:-webkit-any-link {
 
 .tag {
   padding: 0 3px;
-  background-color: var(--tint);
+  background-color: var(--complementary-tint);
   border-radius: 3px;
 }
 
