@@ -168,7 +168,8 @@ a:-webkit-any-link {
 }
 
 .icon {
-  min-width: 10px;
+  width: 15px;
+  font-size: 14px;
 }
 
 .big-icon {
@@ -245,7 +246,11 @@ a:-webkit-any-link {
   flex-direction: row;
 }
 
-.profile,
+#profile {
+  gap: 5px;
+  padding-bottom: 25px;
+}
+
 .details {
   display: flex;
   flex: 1;
