@@ -74,13 +74,14 @@ p {
 
 hr {
   height: 5px;
-  width: 60%;
+  width: 100%;
   border: none;
   background-color: var(--tint);
 }
 
 .hr-row {
   height: 25px;
+  gap: 25px;
 }
 
 a:-webkit-any-link {
@@ -167,7 +168,12 @@ a:-webkit-any-link {
 }
 
 .icon {
+  min-width: 10px;
+}
+
+.big-icon {
   min-width: 15px;
+  font-size: 20px;
 }
 
 .button {
@@ -233,6 +239,10 @@ a:-webkit-any-link {
 
 .head {
   height: var(--head-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .profile,
@@ -247,7 +257,7 @@ a:-webkit-any-link {
 }
 
 #homepage {
-  padding: 40px 10px 15px 10px;
+  padding: 40px 0 15px 0;
 }
 
 .page hr {
@@ -262,6 +272,10 @@ a:-webkit-any-link {
 /* INDEX */
 .file-entry {
   gap: 50px;
+}
+
+.file-entry > a {
+  min-width: 50px;
 }
 
 /* SIDE */
@@ -311,7 +325,7 @@ a:-webkit-any-link {
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  padding-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .name h1 {
@@ -319,6 +333,7 @@ a:-webkit-any-link {
   font-weight: normal;
   font-family: arial;
   letter-spacing: 10px;
+  padding-left: 10px;
 }
 
 .name div {
