@@ -334,15 +334,15 @@ a:-webkit-any-link {
 }
 
 .name h1 {
-  font-size: 25px;
+  font-size: 20pt;
   font-weight: normal;
   font-family: arial;
-  letter-spacing: 10px;
-  padding-left: 10px;
+  letter-spacing: 6pt;
+  padding-left: 6pt;
 }
 
 .name div {
-  font-size: 32px;
+  font-size: 25pt;
   text-transform: uppercase;
   color: var(--color);
 }
@@ -469,7 +469,7 @@ a:-webkit-any-link {
   flex-wrap: nowrap;
   column-gap: 2px;
   padding: 2px 4px;
-  font-size: 12px;
+  font-size: 6pt;
   border: var(--alt-color) 1px solid;
   border-radius: 3px;
 }
