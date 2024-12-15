@@ -8,4 +8,3 @@ qpdf --linearize cv.pdf - > cv.cleaned.pdf
 rm cv.pdf
 rm cv.pdf_original
 mv cv.cleaned.pdf cv.pdf
-```
