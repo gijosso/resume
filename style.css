@@ -219,7 +219,7 @@ a:-webkit-any-link {
 
 .page-container {
   flex: 10;
-  height: var(--doc-height);
+  /* height: var(--doc-height); */
   background-color: var(--background);
 }
 
@@ -235,7 +235,7 @@ a:-webkit-any-link {
 }
 
 .page {
-  padding: 1.4cm;
+  padding: 0 1.4cm 0.4cm 1.4cm;
 }
 
 .head {
@@ -472,6 +472,31 @@ a:-webkit-any-link {
   font-size: 6pt;
   border: var(--alt-color) 1px solid;
   border-radius: 3px;
+}
+
+.skills-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 6px;
+}
+
+.skills-table th {
+  padding-right: 6px;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+}
+
+.skills-table td {
+  vertical-align: top;
+  line-height: 1.4em;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.skills-table td span {
+  white-space: nowrap;
 }
 
 /* SHOWCASE */
